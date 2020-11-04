@@ -1,0 +1,95 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C bulid for clang",
+            "command": "clang",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+            "presentation": {
+                "clear": true
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "C++ bulid for clang++",
+            "command": "clang++",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+            "presentation": {
+                "clear": true
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "execute",
+            "command": "${fileDirname}/${fileBasenameNoExtension}",
+            "group": "test",
+            "presentation": {
+                "clear": true
+            }
+        }
+    ]
+}
+
+/*
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        }
+    ],
+    "tesks": [
+        {
+            "taskName": "build",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "test.c"
+            ],
+        }
+    ],
+    "compile": [
+        {
+            "version": "0.1.0",
+            "command": "g++",
+            "isShellCommand": true,
+            "showOutput": "always",
+            "args": ["-g", "main.cpp"]
+        } 
+    ]
+}
+*/
